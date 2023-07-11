@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Input and Variable Output</title>
+  <script>
+    function displayValues() {
+      // Get the image input value
+      var imageInput = document.getElementById("imageInput").value;
+
+      // Get the array size
+      var arraySize = parseInt(document.getElementById("arraySize").value);
+
+      // Generate variable key-value pairs based on array size
+      var output = "";
+      for (var i = 0; i < arraySize; i++) {
+        var key = "Key" + i;
+        var value = "Value" + i;
+        output += key + ": " + value + "<br>";
+      }
+
+      // Display the output
+      document.getElementById("output").innerHTML = output;
+    }
+  </script>
+</head>
+<body>
+  <label for="imageInput">Image Input:</label>
+  <input type="text" id="imageInput"><br><br>
+
+  <label for="arraySize">Array Size:</label>
+  <input type="number" id="arraySize"><br><br>
+
+  <button onclick="displayValues()">Display Values</button><br><br>
+
+  <div id="output"></div>
+</body>
+</html>
